@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import debugTool from '../../data/debugtools'
-import { FlexIcon, GridIcon } from '../icons'
+import { FlexIcon, GridIcon, WindowIcon, ConsoleIcon, PuzzleIcon } from '../icons'
 import { ToolsGrid } from './ToolsGrid'
 import { ToolsRows } from './ToolsRows'
 const { tools } = debugTool
@@ -8,10 +8,24 @@ const { tools } = debugTool
 export function ToolsShowcase() {
   const [gridDisplay, setGridDisplay] = useState(true)
 
+
   return (
     <div className='flex flex-col gap-4'>
       <article className='flex justify-between'>
-        <div></div>
+        <div>
+          <ul className='flex gap-2 text-sm'>
+            <button className='p-2 bg-stone-800 rounded-lg uppercase'>all</button>
+            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+              <PuzzleIcon />
+            </button>
+            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+              <ConsoleIcon />
+            </button>
+            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+              <WindowIcon />
+            </button>
+          </ul>
+        </div>
         <div className='flex gap-4'>
           <button
             onClick={() => setGridDisplay(true)}

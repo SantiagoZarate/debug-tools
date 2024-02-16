@@ -1,3 +1,6 @@
 export * from './GridIcon'
 export * from './FlexIcon'
 export * from './LinkArrowIcon'
+export * from './ConsoleIcon'
+export * from './PuzzleIcon'
+export * from './WindowIcon'
