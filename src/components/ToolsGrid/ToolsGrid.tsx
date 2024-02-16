@@ -23,12 +23,18 @@ export function ToolsGrid() {
           </button>
         </div>
       </article>
-      <ul>
+      <ul className={`grid grid-cols-responsive gap-4`}>
         {tools.map(tool => (
-          <li key={tool.name}>
-            <figure>
-              <img src={tool.picture} alt="" />
-            </figure>
+          <li
+            className='flex flex-col'
+            key={tool.name}>
+            {/* <figure className=''>
+              <img
+                className='object-cover w-full h-full'
+                src={"https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"} alt={`${tool.name} picture`}
+                title={tool.name} />
+            </figure> */}
+            <h3 className='capitalize'>{tool.name}</h3>
           </li>
         ))}
       </ul>

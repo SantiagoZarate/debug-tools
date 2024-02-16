@@ -3,6 +3,7 @@ export interface DebugTool {
   url: string,
   picture: string,
   description: string,
+  moreDetails : string,
   category: DebugToolCategory
 }
 
