@@ -3,27 +3,39 @@ import debugTool from '../../data/debugtools'
 import { FlexIcon, GridIcon, WindowIcon, ConsoleIcon, PuzzleIcon } from '../icons'
 import { ToolsGrid } from './ToolsGrid'
 import { ToolsRows } from './ToolsRows'
+import { useFilters } from '../../hooks/useFilters'
+import { FilterButton } from './FilterButton'
 const { tools } = debugTool
 
 export function ToolsShowcase() {
   const [gridDisplay, setGridDisplay] = useState(true)
+  const { filter, filterTools, handleClickFilter } = useFilters();
 
+  const filteredTools = filterTools(tools) ?? []
 
   return (
     <div className='flex flex-col gap-4'>
       <article className='flex justify-between'>
         <div>
           <ul className='flex gap-2 text-sm'>
-            <button className='p-2 bg-stone-800 rounded-lg uppercase'>all</button>
-            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+            <FilterButton
+              isActive={filter.includes('extension')}
+              id='extension'
+              onClick={(e) => handleClickFilter(e)}>
               <PuzzleIcon />
-            </button>
-            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+            </FilterButton>
+            <FilterButton
+              isActive={filter.includes('built-in')}
+              id='built-in'
+              onClick={(e) => handleClickFilter(e)}>
               <ConsoleIcon />
-            </button>
-            <button className='p-2 bg-stone-800 rounded-lg uppercase'>
+            </FilterButton>
+            <FilterButton
+              isActive={filter.includes('webpage')}
+              id='webpage'
+              onClick={(e) => handleClickFilter(e)}>
               <WindowIcon />
-            </button>
+            </FilterButton>
           </ul>
         </div>
         <div className='flex gap-4'>
@@ -41,8 +53,8 @@ export function ToolsShowcase() {
       </article>
       {
         gridDisplay
-          ? <ToolsGrid tools={tools} />
-          : <ToolsRows tools={tools} />
+          ? <ToolsGrid tools={filteredTools} />
+          : <ToolsRows tools={filteredTools} />
       }
     </div>
   )
