@@ -1,10 +1,13 @@
 export interface DebugTool {
   name: string,
   url: string,
-  picture: string,
   description: string,
-  moreDetails : string,
+  moreDetails: string,
   category: DebugToolCategory
+  pictures: {
+    preview: string,
+    logo: string
+  },
 }
 
 type DebugToolCategory = 'extension' | 'webpage'

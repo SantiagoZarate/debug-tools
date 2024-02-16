@@ -23,19 +23,27 @@ export function ToolsGrid() {
           </button>
         </div>
       </article>
-      <ul className={`grid grid-cols-responsive gap-4`}>
+      <ul className={`grid grid-cols-responsive gap-8`}>
         {tools.map(tool => (
-          <li
-            className='flex flex-col'
-            key={tool.name}>
-            {/* <figure className=''>
+          <a
+            href={tool.url}
+            target='_blank'
+            className='flex flex-col rounded-lg hover:scale-[103%] hover:outline hover:shadow-xl duration-300 transition-all'
+            key={tool.name} rel="noreferrer">
+            <figure className='p-6 bg-gradient-to-tr from-zinc-950 from-30% to-violet-900'>
               <img
-                className='object-cover w-full h-full'
-                src={"https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"} alt={`${tool.name} picture`}
+                className='object-cover rounded-3xl w-full h-full'
+                src={tool.pictures.preview} alt={`${tool.name} picture`}
                 title={tool.name} />
-            </figure> */}
-            <h3 className='capitalize'>{tool.name}</h3>
-          </li>
+            </figure>
+            <article className='flex flex-col gap-2 p-2'>
+              <header className='flex gap-2 items-center'>
+                <h3 className='capitalize text-xl font-bold'>{tool.name}</h3>
+                <span className='text-xs px-3 py-1 bg-stone-900 rounded-full'>{tool.category}</span>
+              </header>
+              <p className='text-xs'>{tool.description}</p>
+            </article>
+          </a>
         ))}
       </ul>
     </div>
