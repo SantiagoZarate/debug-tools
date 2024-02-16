@@ -10,7 +10,7 @@
     "astro": "astro",
     "prepare": "husky",
     "lint:staged": "lint-staged",
-    "lint" : "eslint"
+    "lint": "eslint"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.4",
@@ -25,6 +25,8 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "eslint": "8.56.0",
