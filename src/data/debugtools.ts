@@ -1,3 +1,5 @@
+import { type DebugTool } from "../types"
+
 export default {
   tools: [
     {
@@ -59,13 +61,3 @@ export default {
 
   ]
 } satisfies { tools: DebugTool[] }
-
-interface DebugTool {
-  name: string,
-  url: string,
-  picture: string,
-  description: string,
-  category: DebugToolCategory
-}
-
-type DebugToolCategory = 'extension' | 'webpage'
