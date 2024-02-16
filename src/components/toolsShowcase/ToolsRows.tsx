@@ -1,5 +1,6 @@
 import type { DebugTool } from "../../types"
 import { LinkArrowIcon } from "../icons"
+import { DetailsIcon } from "../icons/DetailsIcon"
 
 type Props = {
   tools: DebugTool[]
@@ -31,7 +32,15 @@ export function ToolsRows({ tools }: Props) {
             </figure>
           </div>
           <footer className='flex w-full p-4 justify-between items-center gap-4'>
-            <p className="text-stone-300 first-letter:uppercase">{tool.description}{tool.moreDetails}</p>
+            <article className="flex gap-2">
+              <aside className="flex flex-col items-center text-white/30">
+                <div className="min-w-fit">
+                  <DetailsIcon />
+                </div>
+                <div className="w-[1px] h-full bg-white/30 mt-1" />
+              </aside>
+              <p className="w-full text-stone-300 text-justify first-letter:uppercase">{tool.description}{tool.moreDetails}</p>
+            </article>
             <a
               href={tool.url}
               target="_blank"
