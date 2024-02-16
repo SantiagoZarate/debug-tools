@@ -14,6 +14,17 @@ export default {
       url: "https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en"
     },
     {
+      name: "squoosh",
+      category: "extension",
+      description: "open-source image optimization tool developed by Google.",
+      moreDetails: " It allows users to compress and optimize images for the web by adjusting various settings such as compression level, image format, and resizing, while maintaining visual quality.",
+      pictures: {
+        logo: "./images/logos/squoosh-logo.webp",
+        preview: "./images/squoosh.webp"
+      },
+      url: "https://page-speed.dev/"
+    },
+    {
       name: "axe",
       category: "webpage",
       description: "a powerful accessibility testing tool that helps developers ensure their web content is accessible to all users, including those with disabilities.",
@@ -29,17 +40,6 @@ export default {
       category: "extension",
       description: "CSS Overview is a tool that helps developers analyze and understand the CSS styles applied to a web page.",
       moreDetails: " It provides a visual overview of all CSS styles used on a page, including selectors, properties, and values, making it easier to manage and debug CSS code.",
-      pictures: {
-        logo: "./images/lighthouse.webp",
-        preview: "./images/lighthouse.webp"
-      },
-      url: "https://page-speed.dev/"
-    },
-    {
-      name: "squoosh",
-      category: "extension",
-      description: "open-source image optimization tool developed by Google.",
-      moreDetails: " It allows users to compress and optimize images for the web by adjusting various settings such as compression level, image format, and resizing, while maintaining visual quality.",
       pictures: {
         logo: "./images/lighthouse.webp",
         preview: "./images/lighthouse.webp"
