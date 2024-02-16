@@ -30,8 +30,8 @@ export default {
       description: "a powerful accessibility testing tool that helps developers ensure their web content is accessible to all users, including those with disabilities.",
       moreDetails: " It scans web pages for accessibility issues and provides detailed reports and recommendations for remediation.",
       pictures: {
-        logo: "./images/lighthouse.webp",
-        preview: "./images/lighthouse.webp"
+        logo: "./images/logos/axe-logo.webp",
+        preview: "./images/axe.webp"
       },
       url: "https://page-speed.dev/"
     },
