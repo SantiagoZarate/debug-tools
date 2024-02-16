@@ -1,4 +1,4 @@
-import { type DebugTool } from "../types"
+import type { DebugTool } from "../types"
 
 export default {
   tools: [
