@@ -37,14 +37,14 @@ export default {
     },
     {
       name: "css overview",
-      category: "extension",
+      category: "built-in",
       description: "CSS Overview is a tool that helps developers analyze and understand the CSS styles applied to a web page.",
       moreDetails: " It provides a visual overview of all CSS styles used on a page, including selectors, properties, and values, making it easier to manage and debug CSS code.",
       pictures: {
-        logo: "./images/lighthouse.webp",
-        preview: "./images/lighthouse.webp"
+        logo: "./images/logos/devtool-logo.webp",
+        preview: "./images/css-overview.webp"
       },
-      url: "https://page-speed.dev/"
+      url: "https://developer.chrome.com/docs/devtools/css-overview"
     },
     {
       name: "web page test",
@@ -52,7 +52,7 @@ export default {
       description: "free online tool for measuring and analyzing the performance of web pages.",
       moreDetails: " It allows users to run performance tests from multiple locations and devices, providing detailed metrics and visualizations to help identify areas for improvement.",
       pictures: {
-        logo: "./images/lighthouse.webp",
+        logo: "./images/logos/lighthouse-logo.webp",
         preview: "./images/lighthouse.webp"
       },
       url: "https://page-speed.dev/"
@@ -63,7 +63,7 @@ export default {
       description: "also known as Google PageSpeed Insights, is a tool provided by Google to analyze the performance of web pages on both desktop and mobile devices.",
       moreDetails: " It evaluates various aspects of page performance and provides suggestions for optimization to improve loading speed and user experience.",
       pictures: {
-        logo: "./images/lighthouse.webp",
+        logo: "./images/logos/lighthouse-logo.webp",
         preview: "./images/lighthouse.webp"
       },
       url: "https://page-speed.dev/"
@@ -74,7 +74,7 @@ export default {
       description: "open-source tool that detects the technologies used on websites.",
       moreDetails: " It identifies content management systems, e-commerce platforms, web frameworks, and other tools and services, helping users understand the technology stack behind any website.",
       pictures: {
-        logo: "./images/lighthouse.webp",
+        logo: "./images/logos/lighthouse-logo.webp",
         preview: "./images/lighthouse.webp"
       },
       url: "https://page-speed.dev/"
@@ -85,7 +85,7 @@ export default {
       description: "Open Graph is a protocol developed by Facebook that allows websites to control how their content appears when shared on social media platforms.",
       moreDetails: " It enables developers to specify metadata such as titles, descriptions, and images, optimizing the appearance of shared content and increasing engagement.",
       pictures: {
-        logo: "./images/lighthouse.webp",
+        logo: "./images/logos/lighthouse-logo.webp",
         preview: "./images/lighthouse.webp"
       },
       url: "https://page-speed.dev/"

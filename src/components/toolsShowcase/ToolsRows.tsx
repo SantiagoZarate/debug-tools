@@ -17,10 +17,10 @@ export function ToolsRows({ tools }: Props) {
           </header>
           <div className='group relative p-8  *:duration-300 transition-transform'>
             <img
-              className='group-hover:-translate-y-2 z-20 bg-stone-100 absolute left-[16%] top-1/2 w-14 h-14 rounded-full shadow-md'
+              className='group-hover:-translate-y-2 group-hover:-skew-x-2 group-hover:shadow-2xl z-20 bg-stone-100 absolute left-[16%] top-1/2 w-14 h-14 rounded-full shadow'
               src={tool.pictures.logo}
               alt="" />
-            <figure className="relative group-hover:translate-y-2 flex justify-center">
+            <figure className="relative group-hover:translate-y-2 group-hover:-skew-x-2 flex justify-center">
               <img
                 className='w-2/3 h-[285px] rounded-2xl object-cover z-10'
                 src={tool.pictures.preview}

@@ -10,4 +10,4 @@ export interface DebugTool {
   },
 }
 
-type DebugToolCategory = 'extension' | 'webpage'
+type DebugToolCategory = 'extension' | 'webpage' | 'built-in'
