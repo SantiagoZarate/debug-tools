@@ -1,15 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { ToolsShowcase } from '../components/toolsShowcase'
+import Layout from "../layouts/Layout.astro";
+import { ToolsShowcase } from "../components/toolsShowcase";
+import Hero from "../components/hero/Hero.astro";
+import HeroSeparator from "../components/hero/HeroSeparator.astro";
 ---
 
-<Layout title='debug tool'>
-  <div class="min-h-screen bg-stone-950 text-stone-200 flex flex-col items-center">
-    <div class="max-w-screen-lg w-full">
-      <section>
-        <h1 class="text-3xl">Debug tools 🛠</h1>
-      </section>
-      <ToolsShowcase client:load/>
+<Layout title="debug tool">
+  <div class="min-h-screen bg-stone-950 text-stone-200">
+    <div class="max-w-screen-lg w-full flex flex-col mx-auto">
+      <Hero />
+      <HeroSeparator />
+      <ToolsShowcase client:load />
     </div>
   </div>
 </Layout>
