@@ -16,7 +16,7 @@ export function ToolsShowcase() {
 
   return (
     <div className='flex flex-col gap-4'>
-      <article className='flex justify-between'>
+      <header className='flex justify-between'>
         <div>
           <ul className='flex gap-2 text-sm'>
             {categories.map((filterOption) => (
@@ -24,7 +24,6 @@ export function ToolsShowcase() {
                 isActive={filter.includes(filterOption)}
                 hoverName={filterOption}
                 key={filterOption}
-                id={filterOption}
                 onClick={(e) => handleClickFilter(e)}>
                 {
                   filterOption === 'webpage'
@@ -36,40 +35,20 @@ export function ToolsShowcase() {
               </FilterButton>
             ))}
           </ul>
-          {/* <ul className='flex gap-2 text-sm'>
-            <FilterButton
-              isActive={filter.includes('extension')}
-              id='extension'
-              onClick={(e) => handleClickFilter(e)}>
-              <PuzzleIcon />
-            </FilterButton>
-            <FilterButton
-              isActive={filter.includes('built-in')}
-              id='built-in'
-              onClick={(e) => handleClickFilter(e)}>
-              <ConsoleIcon />
-            </FilterButton>
-            <FilterButton
-              isActive={filter.includes('webpage')}
-              id='webpage'
-              onClick={(e) => handleClickFilter(e)}>
-              <WindowIcon />
-            </FilterButton>
-          </ul> */}
         </div>
-        <div className='flex gap-4'>
+        <div className='flex gap-2'>
           <button
             onClick={() => setGridDisplay(true)}
-            className={`${gridDisplay ? "bg-stone-800" : "bg-stone-900"} p-2 rounded-xl duration-150 transition-colors `}>
+            className={`${gridDisplay ? "bg-stone-700 rounded-full" : "bg-stone-900 rounded-xl"} p-2 duration-300 transition-colors `}>
             <GridIcon />
           </button>
           <button
             onClick={() => setGridDisplay(false)}
-            className={`${!gridDisplay ? "bg-stone-800" : "bg-stone-900"} p-2 rounded-xl duration-150 transition-colors `}>
+            className={`${!gridDisplay ? "bg-stone-700 rounded-full" : "bg-stone-900 rounded-xl"} p-2 duration-300 transition-colors `}>
             <FlexIcon />
           </button>
         </div>
-      </article>
+      </header>
       {
         gridDisplay
           ? <ToolsGrid tools={filteredTools} />

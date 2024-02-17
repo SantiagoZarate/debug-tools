@@ -15,10 +15,11 @@ export function useFilters() {
   }
 
   const handleClickFilter = (event: React.MouseEvent) => {
-    const buttonID = event.currentTarget.getAttribute('id') as DebugToolCategory
-    filters.includes(buttonID)
-      ? setFilter(filters.filter(filter => filter !== buttonID))
-      : setFilter([...filters, buttonID])
+    const innerSpan = event.currentTarget.querySelector('span')
+    const filterSelected = innerSpan?.innerText.toLocaleLowerCase() as DebugToolCategory
+    filters.includes(filterSelected)
+      ? setFilter(filters.filter(filter => filter !== filterSelected))
+      : setFilter([...filters, filterSelected])
   }
 
   return {

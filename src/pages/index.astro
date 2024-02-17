@@ -7,10 +7,17 @@ import HeroSeparator from "../components/hero/HeroSeparator.astro";
 
 <Layout title="debug tool">
   <div class="min-h-screen bg-stone-950 text-stone-200">
-    <div class="max-w-screen-lg w-full flex flex-col mx-auto p-4">
+    <div class="max-w-screen-lg w-full flex flex-col mx-auto p-4 gap-12">
       <Hero />
       <HeroSeparator />
       <ToolsShowcase client:load />
+      <HeroSeparator />
+      <footer class="w-full flex justify-between pb-24">
+        <p class="text-sm">
+          By <span class="font-bold">Santiago Zarate</span>
+        </p>
+        <nav>github</nav>
+      </footer>
     </div>
   </div>
 </Layout>
