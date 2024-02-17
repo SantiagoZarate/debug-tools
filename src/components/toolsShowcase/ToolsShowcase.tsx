@@ -1,23 +1,42 @@
 import { useState } from 'react'
 import debugTool from '../../data/debugtools'
-import { FlexIcon, GridIcon, WindowIcon, ConsoleIcon, PuzzleIcon } from '../icons'
+import { FlexIcon, GridIcon, ConsoleIcon, PuzzleIcon, WindowIcon } from '../icons'
 import { ToolsGrid } from './ToolsGrid'
 import { ToolsRows } from './ToolsRows'
 import { useFilters } from '../../hooks/useFilters'
 import { FilterButton } from './FilterButton'
+import type { DebugToolCategory } from '../../types'
 const { tools } = debugTool
 
 export function ToolsShowcase() {
   const [gridDisplay, setGridDisplay] = useState(true)
   const { filter, filterTools, handleClickFilter } = useFilters();
-
   const filteredTools = filterTools(tools) ?? []
+  const categories: DebugToolCategory[] = ['extension', 'built-in', 'webpage']
 
   return (
     <div className='flex flex-col gap-4'>
       <article className='flex justify-between'>
         <div>
           <ul className='flex gap-2 text-sm'>
+            {categories.map((filterOption) => (
+              <FilterButton
+                isActive={filter.includes(filterOption)}
+                hoverName={filterOption}
+                key={filterOption}
+                id={filterOption}
+                onClick={(e) => handleClickFilter(e)}>
+                {
+                  filterOption === 'webpage'
+                    ? <WindowIcon />
+                    : (filterOption === 'extension'
+                      ? <PuzzleIcon />
+                      : <ConsoleIcon />)
+                }
+              </FilterButton>
+            ))}
+          </ul>
+          {/* <ul className='flex gap-2 text-sm'>
             <FilterButton
               isActive={filter.includes('extension')}
               id='extension'
@@ -36,7 +55,7 @@ export function ToolsShowcase() {
               onClick={(e) => handleClickFilter(e)}>
               <WindowIcon />
             </FilterButton>
-          </ul>
+          </ul> */}
         </div>
         <div className='flex gap-4'>
           <button
